@@ -15,7 +15,7 @@ subreddit_name = "automateiit"  # Replace with your actual subreddit
 
 # Image details
 post_title = "Automated Image Post 🚀"
-image_path = "images/post1.jpg"  # Make sure this image exists in your repo
+image_path = "images/post1.png"  # Make sure this image exists in your repo
 
 # Submit the image post
 subreddit = reddit.subreddit(subreddit_name)
