@@ -2,14 +2,15 @@ name: Reddit Auto Poster
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Runs every day at 12 PM UTC
+    - cron: '0 12 * * *'  # Runs daily at 12 PM UTC
   workflow_dispatch:  # Allows manual runs
 
 jobs:
   post_to_reddit:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -20,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install praw
 
-      - name: Run script
+      - name: Run the script
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
