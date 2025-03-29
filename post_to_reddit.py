@@ -11,7 +11,7 @@ reddit = praw.Reddit(
 )
 
 # Subreddit Name (CHANGE THIS)
-subreddit_name = "YourSubreddit"  # Replace with your actual subreddit
+subreddit_name = "automateiit"  # Replace with your actual subreddit
 post_title = "Hello, Reddit! 🚀"
 post_body = "This is an automated post from my GitHub Actions setup."
 
