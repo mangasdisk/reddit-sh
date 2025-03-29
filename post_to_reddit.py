@@ -12,11 +12,13 @@ reddit = praw.Reddit(
 
 # Subreddit Name (CHANGE THIS)
 subreddit_name = "automateiit"  # Replace with your actual subreddit
-post_title = "Hello, Reddit! 🚀"
-post_body = "This is an automated post from my GitHub Actions setup."
 
-# Post to subreddit
+# Image details
+post_title = "Automated Image Post 🚀"
+image_path = "images/post1.jpg"  # Make sure this image exists in your repo
+
+# Submit the image post
 subreddit = reddit.subreddit(subreddit_name)
-submission = subreddit.submit(title=post_title, selftext=post_body)
+submission = subreddit.submit_image(post_title, image_path)
 
 print(f"Posted: {submission.url}")
