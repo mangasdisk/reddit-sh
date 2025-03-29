@@ -10,13 +10,13 @@ reddit = praw.Reddit(
     user_agent=os.getenv("REDDIT_USER_AGENT"),
 )
 
-# Define subreddit and post details
-subreddit_name = "YourSubreddit"  # Replace with the subreddit name
-post_title = "Scheduled Reddit Post 🚀"
-image_path = "images/post1.jpg"  # Ensure this exists
+# Subreddit Name (CHANGE THIS)
+subreddit_name = "YourSubreddit"  # Replace with your actual subreddit
+post_title = "Hello, Reddit! 🚀"
+post_body = "This is an automated post from my GitHub Actions setup."
 
-# Submit the post
+# Post to subreddit
 subreddit = reddit.subreddit(subreddit_name)
-submission = subreddit.submit_image(post_title, image_path)
+submission = subreddit.submit(title=post_title, selftext=post_body)
 
 print(f"Posted: {submission.url}")
